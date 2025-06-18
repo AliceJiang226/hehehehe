@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #222;
+    color: #fff;
+}
+header {
+    text-align: center;
+    padding: 2rem 1rem 1rem 1rem;
+    background: #4fc3f7;
+    color: #fff;
+}
+#score, #highscore {
+    font-size: 1.2rem;
+    margin: 0.5rem;
+    text-shadow: 1px 1px 2px #222, 0 0 8px #fff;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    background: #222;
+}
+canvas {
+    background: linear-gradient(to top, #87ceeb 80%, #fff 100%);
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+    display: block;
+    margin: 0 auto;
+}
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: #222;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
