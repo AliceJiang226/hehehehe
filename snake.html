@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Game</title>
+  <style>
+    body { background: #111; margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; }
+    h1 { color: #fff; }
+    #score { color: #fff; font-size: 1.2rem; margin-bottom: 1rem; }
+    canvas { background: #222; border-radius: 10px; box-shadow: 0 0 20px #4fc3f7; }
+    button { transition: background 0.3s; }
+    button:hover { background: #3bb8e4; }
+  </style>
+</head>
+<body>
+  <h1>Snake Game</h1>
+  <div id="score">Score: 0</div>
+  <div style="margin-bottom: 1rem; display: flex; gap: 1rem;">
+    <button id="restartBtn" style="padding: 0.7rem 1.5rem; font-size: 1rem; border-radius: 6px; border: none; background: #4fc3f7; color: #111; cursor: pointer;">Start Over</button>
+    <button id="homeBtn" style="padding: 0.7rem 1.5rem; font-size: 1rem; border-radius: 6px; border: none; background: #fff; color: #111; cursor: pointer;">Home</button>
+  </div>
+  <canvas id="gameCanvas" width="400" height="400"></canvas>
+  <script src="assets/snake.js"></script>
+  <script>
+    document.getElementById('restartBtn').onclick = function() { window.location.reload(); };
+    document.getElementById('homeBtn').onclick = function() { window.location.href = 'index.html'; };
+  </script>
+</body>
+</html>
