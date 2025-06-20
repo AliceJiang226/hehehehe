@@ -3,17 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Space Shooter</title>
-  <link rel="stylesheet" href="assets/styles.css">
+  <title>Game Starter Page</title>
+  <style>
+    html, body { height: 100%; margin: 0; padding: 0; background: #111; }
+    body { width: 100vw; height: 100vh; background: #111; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    h1 { color: #fff; margin-bottom: 2rem; }
+    .game-options { display: flex; flex-direction: column; gap: 1.2rem; }
+    .game-btn {
+      padding: 1rem 2.5rem;
+      font-size: 1.3rem;
+      border: none;
+      border-radius: 8px;
+      background: #222;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .game-btn:hover {
+      background: #4fc3f7;
+      color: #111;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1 style="color: #fff; text-align: center;">Space Shooter</h1>
-    <div id="score" style="color: #fff; text-align: center;">Score: 0</div>
-  </header>
-  <main>
-    <canvas id="gameCanvas" width="500" height="600"></canvas>
-  </main>
-  <script src="assets/main.js"></script>
+  <h1>Choose a Game</h1>
+  <div class="game-options">
+    <button class="game-btn">Snake</button>
+    <button class="game-btn">Space Shooter</button>
+    <button class="game-btn">Tic Tac Toe</button>
+    <button class="game-btn">2048</button>
+    <button class="game-btn">Pong</button>
+  </div>
 </body>
 </html>
