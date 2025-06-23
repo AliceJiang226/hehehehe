@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Game Starter Page</title>
   <style>
-    html, body { height: 100%; margin: 0; padding: 0; background: #111; }
-    body { width: 100vw; height: 100vh; background: #111; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-    h1 { color: #fff; margin-bottom: 2rem; }
+    html, body { height: 100%; margin: 0; padding: 0; background: #f5f5dc; }
+    body { width: 100vw; height: 100vh; background: #f5f5dc; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: background 0.3s; }
+    h1 { color: #222; margin-bottom: 2rem; }
     .game-options { display: flex; flex-direction: column; gap: 1.2rem; }
     .game-btn {
       padding: 1rem 2.5rem;
@@ -30,9 +30,22 @@
   <div class="game-options">
     <button class="game-btn" onclick="window.location.href='snake.html'">Snake</button>
     <button class="game-btn" onclick="window.location.href='spaceshooter.html'">Space Shooter</button>
-    <button class="game-btn">Tic Tac Toe</button>
+    <button class="game-btn" onclick="window.location.href='tictactoe.html'">Tic Tac Toe</button>
     <button class="game-btn">2048</button>
     <button class="game-btn">Pong</button>
   </div>
+  <script>
+    const colors = ['#f5f5dc', '#ffd1dc', '#b3e0ff', '#e6ccff'];
+    let clickCount = 0;
+    document.body.addEventListener('click', function(e) {
+      // Only trigger if background is clicked, not a button or child
+      if (e.target !== document.body) return;
+      clickCount++;
+      const colorIdx = clickCount % 4;
+      document.body.style.background = colors[colorIdx];
+      document.documentElement.style.background = colors[colorIdx];
+      if (colorIdx === 0) clickCount = 0;
+    });
+  </script>
 </body>
 </html>
